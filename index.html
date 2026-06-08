@@ -95,10 +95,11 @@ header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 1px 0 var
 .pico{flex-shrink:0;width:40px;height:40px;border-radius:10px;background:rgba(240,80,10,.08);display:flex;align-items:center;justify-content:center;color:var(--brand);font-size:13px;font-weight:700}
 .ptxt strong{display:block;font-size:16px;font-weight:600;margin-bottom:4px}
 .ptxt span{font-size:15px;color:var(--gray)}
-  .problem-head{max-width:1100px;margin:0 auto 48px;text-align:center}
-.problem-head .sec-title{max-width:1100px;margin-left:auto;margin-right:auto}
-.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.problem-grid li{border:1px solid var(--border);border-radius:var(--r);padding:24px;background:#fff;box-shadow:var(--sh)}
+  .problem-layout{max-width:1120px;margin:0 auto}
+.problem-head{max-width:960px;margin:0 auto 56px;text-align:center}
+.problem-head .sec-title{max-width:960px;margin-left:auto;margin-right:auto;font-size:48px;line-height:1.12}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:0}
+.problem-grid li{border:1px solid var(--border);border-radius:var(--r);padding:28px;background:#fff;box-shadow:var(--sh)}
 .quote-box{background:var(--bg-alt);border-radius:var(--r);padding:36px;border-left:4px solid var(--brand)}
 .quote-box blockquote{font-size:17px;line-height:1.65;font-style:italic;margin-bottom:14px}
 .quote-box cite{font-size:13px;color:var(--gray);font-style:normal;font-weight:600}
@@ -336,7 +337,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--bg-alt
   .comm-2col,.boards-grid{grid-template-columns:1fr}
   .bi2{grid-template-columns:1fr}
 }
-@media(max-width:767px){.logo-grid{grid-template-columns:repeat(2,1fr)}
+@media(max-width:767px){.logo-grid{grid-template-columns:repeat(2,1fr)}.problem-head{text-align:left;margin-bottom:32px}.problem-head .sec-title{font-size:34px}.problem-grid{grid-template-columns:1fr}
   .hero{padding:72px 0 64px}.hero h1{font-size:36px}.hero-sub{font-size:17px}
   .hero-stats{flex-direction:column;gap:24px}
   .hdr,.wrap,.ftr{padding-left:20px;padding-right:20px}
@@ -400,7 +401,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--bg-alt
 <!-- ══ S2: ĐẶT VẤN ĐỀ ══════════════════════════════════ -->
 <section class="sec" id="van-de">
   <div class="wrap">
-    <div class="grid2">
+    <div class="problem-layout">
       <div class="problem-head">
   <span class="eyebrow a">Đặt vấn đề</span>
   <h2 class="sec-title a">“Nếu đã tổ chức Pickleball, 1Office nên thiết kế format giải như thế nào để vừa tạo hiệu ứng lan tỏa thương hiệu, vừa kết nối được nhóm khách hàng chất lượng?”</h2>
