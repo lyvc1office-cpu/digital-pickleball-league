@@ -181,9 +181,39 @@ header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 1px 0 var
 .purpose-box{background:#fff;border-radius:var(--r);border:1px solid var(--border);padding:32px}
 .purpose-title{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:8px}
 .purpose-body{font-size:15px;color:var(--gray);line-height:1.6;margin-bottom:18px}
-.purpose-items{display:flex;flex-direction:column;gap:8px}
-.pi2{display:flex;gap:10px;font-size:14px;color:var(--gray)}
-.pi2::before{content:'→';color:var(--brand);flex-shrink:0;font-weight:700;font-size:13px;margin-top:1px}
+.purpose-items{
+  margin-top:30px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.pi2{
+  position:relative;
+  display:block;
+  padding:0 0 0 34px;
+  font-size:17px;
+  line-height:1.65;
+  color:var(--gray);
+}
+
+.pi2:before{
+  content:"→";
+  position:absolute;
+  left:0;
+  top:0;
+  color:var(--brand);
+  font-weight:800;
+}
+
+.pi2 strong{
+  display:block;
+  margin-bottom:6px;
+  font-size:18px;
+  line-height:1.35;
+  color:var(--gray);
+  font-weight:800;
+}
 
 /* ─── COMM STRATEGY OVERVIEW ─────────────────────────── */
 .comm-2col{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:48px}
