@@ -35,6 +35,7 @@ header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 1px 0 var
   .nav-links a{font-size:13px;padding:7px 10px}
 }
 @media(max-width:767px){
+  .tp-actions{grid-template-columns:1fr}
   .hdr{padding:0 20px}
   .nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--border);padding:8px 0;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
   .nav-links.open{display:flex}
@@ -314,21 +315,87 @@ header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 1px 0 var
 
 /* ─── VALUE ACTIVITIES (TABS) ────────────────────────── */
 .tabs-wrap{margin-top:0}
-.tabs-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px;border-bottom:2px solid var(--border);padding-bottom:0}
-.tab-btn{font-family:var(--font);font-size:14px;font-weight:600;padding:12px 20px;border:none;background:transparent;color:var(--gray);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .2s ease;border-radius:0}
-.tab-btn.active{color:var(--brand);border-bottom-color:var(--brand)}
+
+.tabs-nav{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:32px;
+  border-bottom:2px solid var(--border);
+  padding-bottom:0;
+}
+
+.tab-btn{
+  font-family:var(--font);
+  font-size:14px;
+  font-weight:600;
+  padding:12px 20px;
+  border:none;
+  background:transparent;
+  color:var(--gray);
+  cursor:pointer;
+  border-bottom:3px solid transparent;
+  margin-bottom:-2px;
+  transition:all .2s ease;
+  border-radius:0;
+}
+
+.tab-btn.active{
+  color:var(--brand);
+  border-bottom-color:var(--brand);
+}
+
 .tab-btn:hover{color:var(--navy)}
-.tab-panel{display:none}.tab-panel.active{display:block}
-.tp-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-.tp-actions{display:flex;flex-direction:column;gap:12px;margin-top:20px}
-.tpa{display:flex;gap:14px;background:var(--bg-alt);border-radius:10px;padding:16px 20px;border:1px solid var(--border)}
-.tpa-dot{flex-shrink:0;margin-top:4px;width:8px;height:8px;border-radius:50%;background:var(--brand)}
-.tpa h5{font-size:15px;font-weight:600;margin-bottom:4px}
-.tpa p{font-size:14px;color:var(--gray);line-height:1.5}
-.tpa-result{font-size:12px;color:var(--brand);font-weight:600;margin-top:4px}
-.tp-value-box{background:var(--navy);border-radius:var(--r);padding:36px;color:#fff}
-.tp-value-box h4{font-size:18px;font-weight:700;margin-bottom:12px}
-.tp-value-box p{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7}
+
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+
+.tp-actions{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin-top:0;
+}
+
+.tpa{
+  position:relative;
+  background:#fff;
+  border-radius:var(--r);
+  padding:24px 26px 24px 28px;
+  border:1px solid var(--border);
+  box-shadow:var(--sh);
+  min-height:190px;
+}
+
+.tpa-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--brand);
+  margin-bottom:16px;
+}
+
+.tpa h5{
+  font-size:17px;
+  font-weight:800;
+  line-height:1.35;
+  color:var(--navy);
+  margin-bottom:8px;
+}
+
+.tpa p{
+  font-size:14px;
+  color:var(--gray);
+  line-height:1.55;
+  margin-bottom:12px;
+}
+
+.tpa-result{
+  font-size:13px;
+  color:var(--brand);
+  font-weight:700;
+  line-height:1.45;
+}
 
 /* ─── TEAM STRUCTURE ─────────────────────────────────── */
 .team-tbl{border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
@@ -885,86 +952,146 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--bg-alt
   <div class="wrap">
     <div class="sec-hdr">
       <span class="eyebrow a">Chi tiết — Lớp 2</span>
-      <h2 class="sec-title a">Chuỗi hoạt động có giá trị:<br>5 lớp tạo lý do để giải được lan tỏa và ghi nhớ</h2>
+      <h2 class="sec-title a">Chuỗi hoạt động có giá trị:<br>4 lớp tạo lý do để giải được lan tỏa và ghi nhớ</h2>
     </div>
+
     <div class="tabs-wrap">
       <div class="tabs-nav">
         <button class="tab-btn active" onclick="switchTab(this,'t1')">01 · Lan tỏa</button>
         <button class="tab-btn" onclick="switchTab(this,'t2')">02 · Thương hiệu</button>
         <button class="tab-btn" onclick="switchTab(this,'t3')">03 · Kết nối</button>
         <button class="tab-btn" onclick="switchTab(this,'t4')">04 · Cộng đồng / Impact</button>
-        <button class="tab-btn" onclick="switchTab(this,'t5')">05 · Dài hạn</button>
       </div>
+
       <!-- Tab 1 -->
       <div class="tab-panel active" id="t1">
-        <div class="tp-inner">
-          <div>
-            <div class="tp-actions">
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Chuỗi Team Profile / Team Reveal</h5><p>Giới thiệu từng đội doanh nghiệp: tên đội, ảnh đội, slogan, tinh thần tham gia.</p><div class="tpa-result">→ Doanh nghiệp có nội dung để tự hào và share trên hệ sinh thái truyền thông của họ.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Thiết kế nhận diện đội thi</h5><p>Áo đội, ảnh profile, template bài đăng, frame check-in có nhận diện 1Office.</p><div class="tpa-result">→ 1Office xuất hiện khéo léo trong mọi nội dung đội thi chia sẻ.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Winner Prediction / Mini Game</h5><p>Mở bài dự đoán trước giải, người tham gia comment/share/follow để dự đoán đội thắng.</p><div class="tpa-result">→ Kéo tương tác trước ngày thi đấu, tăng reach cho fanpage 1Office.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Voting Award / Team Spirit Award</h5><p>Bình chọn đội được yêu thích, đội có tinh thần nổi bật, đội có outfit đẹp.</p><div class="tpa-result">→ Tạo lý do để đội thi kêu gọi đồng nghiệp, partner cùng tương tác.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Recap theo đội</h5><p>Sau giải có album/clip/quote riêng cho các đội nổi bật.</p><div class="tpa-result">→ Giúp đội thi tiếp tục chia sẻ sau sự kiện, kéo dài vòng đời truyền thông.</div></div></div>
-            </div>
+        <div class="tp-actions">
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Chuỗi Team Profile</h5>
+            <p>Giới thiệu tên đội, ảnh đội, slogan và tinh thần tham gia.</p>
+            <div class="tpa-result">→ Tạo nội dung để đội thi tự hào và tự chia sẻ.</div>
           </div>
-          <div class="tp-value-box"><h4>Giá trị tạo ra</h4><p>Giải không chỉ lan tỏa nhờ 1Office đăng bài, mà nhờ mỗi đội doanh nghiệp có lý do để chia sẻ và kéo network của họ cùng tham gia.</p></div>
+
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Game bình chọn đội yêu thích</h5>
+            <p>Bình chọn đội được yêu thích, nổi bật hoặc có tinh thần tốt.</p>
+            <div class="tpa-result">→ Kéo social buzz tự nhiên từ nhân sự, partner và cộng đồng.</div>
+          </div>
+
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Bộ nhận diện đội thi</h5>
+            <p>Thiết kế áo đội, ảnh profile, template bài đăng và frame check-in.</p>
+            <div class="tpa-result">→ Giúp 1Office xuất hiện khéo léo trong nội dung đội thi chia sẻ.</div>
+          </div>
+
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Recap theo đội</h5>
+            <p>Tạo album, video hoặc câu chuyện riêng cho từng đội sau giải.</p>
+            <div class="tpa-result">→ Kéo dài vòng đời nội dung sau sự kiện.</div>
+          </div>
         </div>
       </div>
+
       <!-- Tab 2 -->
       <div class="tab-panel" id="t2">
-        <div class="tp-inner">
-          <div>
-            <div class="tp-actions">
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Business Team League Format</h5><p>Định vị giải là sân chơi của các đội tuyển doanh nghiệp, không phải giải cá nhân/cặp đôi.</p><div class="tpa-result">→ 1Office sở hữu một concept riêng, tạo khác biệt format rõ ràng.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Key Visual & Onsite Experience</h5><p>Nhận diện giải chuyên nghiệp, kết hợp tinh thần thể thao – công nghệ – kết nối.</p><div class="tpa-result">→ Giải nhìn "có tầm", đủ đẹp để check-in, quay chụp và truyền thông.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Brand Story xuyên suốt truyền thông</h5><p>1Office là đơn vị khởi xướng sân chơi kết nối doanh nghiệp hiện đại, có tinh thần chuyển đổi.</p><div class="tpa-result">→ Nâng hình ảnh 1Office từ product brand thành ecosystem brand.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Hero Content / PR bằng con số</h5><p>Tổng kết số đội, doanh nghiệp, partner, lượt tương tác, hoạt động cộng đồng.</p><div class="tpa-result">→ Tạo bằng chứng về quy mô, uy tín và sức ảnh hưởng của giải.</div></div></div>
-            </div>
+        <div class="tp-actions">
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Format đội tuyển doanh nghiệp</h5>
+            <p>Định vị giải là sân chơi của các đội tuyển doanh nghiệp, không phải giải cá nhân.</p>
+            <div class="tpa-result">→ Tạo khác biệt format rõ ràng cho 1Office.</div>
           </div>
-          <div class="tp-value-box"><h4>Giá trị tạo ra</h4><p>1Office được ghi nhớ không chỉ bởi sản phẩm, mà bởi khả năng tạo ra một sân chơi kết nối có hình ảnh, cộng đồng và sức lan tỏa trong giới doanh nghiệp.</p></div>
+
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Trải nghiệm nhận diện tại sân</h5>
+            <p>Thiết kế key visual, booth, backdrop, check-in và khu vực thi đấu đồng bộ.</p>
+            <div class="tpa-result">→ Giúp giải đủ đẹp để check-in, quay chụp và truyền thông.</div>
+          </div>
+
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Câu chuyện thương hiệu xuyên suốt</h5>
+            <p>Gắn 1Office với vai trò đơn vị khởi xướng sân chơi kết nối doanh nghiệp.</p>
+            <div class="tpa-result">→ Nâng hình ảnh 1Office từ product brand thành ecosystem brand.</div>
+          </div>
+
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Nội dung PR bằng con số</h5>
+            <p>Tổng kết số đội, doanh nghiệp, partner, lượt tương tác và hoạt động cộng đồng.</p>
+            <div class="tpa-result">→ Tạo bằng chứng về quy mô, uy tín và sức ảnh hưởng của giải.</div>
+          </div>
         </div>
       </div>
+
       <!-- Tab 3 -->
       <div class="tab-panel" id="t3">
-        <div class="tp-inner">
-          <div>
-            <div class="tp-actions">
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Business Networking Zone</h5><p>Khu vực kết nối dành cho khách mời, partner, sponsor và đội thi.</p><div class="tpa-result">→ Tạo không gian gặp gỡ tự nhiên trong ngày thi đấu.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>VIP / Partner Lounge</h5><p>Điểm gặp riêng cho khách hàng lớn, partner, business leader hoặc nhóm khách mời trọng điểm.</p><div class="tpa-result">→ Tăng chất lượng kết nối với nhóm khách hàng/đối tác quan trọng.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Special Match / Business Leader Match</h5><p>Trận đặc biệt dành cho business leader, partner hoặc khách mời nổi bật.</p><div class="tpa-result">→ Tạo điểm nhấn truyền thông và cơ hội kết nối cấp cao.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Award & Connect Reception</h5><p>Trao giải kết hợp networking cuối ngày.</p><div class="tpa-result">→ Tạo bối cảnh gặp gỡ, trò chuyện và follow-up tự nhiên.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Follow-up sau giải</h5><p>Gửi team recap, album đội, lời cảm ơn, lời mời tham gia hoạt động tiếp theo; lồng ghép khéo léo demo/trải nghiệm 1Office theo nhóm khách phù hợp.</p><div class="tpa-result">→ Chuyển kết nối sự kiện thành cơ hội chăm sóc và phát triển khách hàng tiềm năng.</div></div></div>
-            </div>
+        <div class="tp-actions">
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Khu vực networking doanh nghiệp</h5>
+            <p>Thiết kế không gian kết nối dành cho khách mời, partner, sponsor và đội thi.</p>
+            <div class="tpa-result">→ Tạo bối cảnh gặp gỡ tự nhiên trong ngày thi đấu.</div>
           </div>
-          <div class="tp-value-box"><h4>Giá trị tạo ra</h4><p>Giải giúp 1Office gặp đúng doanh nghiệp, đúng người và đúng bối cảnh cảm xúc; từ đó tạo nền cho Sales/Partnership follow-up tự nhiên sau sự kiện. Sales không cần hỏi thẳng "anh/chị có muốn demo phần mềm không?"</p></div>
+
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Lounge khách mời quan trọng</h5>
+            <p>Bố trí khu vực riêng cho khách hàng lớn, partner hoặc nhóm khách mời trọng điểm.</p>
+            <div class="tpa-result">→ Tăng chất lượng kết nối với nhóm khách hàng/đối tác quan trọng.</div>
+          </div>
+
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Trận đấu khách mời đặc biệt</h5>
+            <p>Tổ chức trận giao hữu có business leader, partner hoặc khách mời nổi bật tham gia.</p>
+            <div class="tpa-result">→ Tạo điểm nhấn truyền thông và cơ hội kết nối cấp cao.</div>
+          </div>
+
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Follow-up sau giải</h5>
+            <p>Gửi team recap, album đội, lời cảm ơn và lời mời tham gia hoạt động tiếp theo.</p>
+            <div class="tpa-result">→ Duy trì kết nối sau sự kiện và mở cơ hội chăm sóc khách hàng.</div>
+          </div>
         </div>
       </div>
+
       <!-- Tab 4 -->
       <div class="tab-panel" id="t4">
-        <div class="tp-inner">
-          <div>
-            <div class="tp-actions">
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Gây quỹ sân chơi thể thao học đường / cộng đồng</h5><p>Mỗi đội thi, partner hoặc sponsor đóng góp một phần vào quỹ xây dựng/trang bị sân chơi thể thao.</p><div class="tpa-result">→ Lan tỏa tinh thần vận động lành mạnh, gắn kết và phát triển cân bằng.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Tặng gói khám sức khỏe / mental wellness</h5><p>Kết hợp với cơ sở y tế, bảo hiểm, health/wellness partner để tặng gói khám hoặc tư vấn sức khỏe.</p><div class="tpa-result">→ Gắn với tinh thần "con người khỏe, doanh nghiệp khỏe".</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Work Well / Wellness Activity tại doanh nghiệp</h5><p>Sau giải, phối hợp cùng chuyên gia sức khỏe tổ chức workshop/tham vấn tại doanh nghiệp tham gia.</p><div class="tpa-result">→ Biến một ngày thi đấu thành hành trình chăm sóc hiệu suất làm việc dài hơn.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Demo "khám sức khỏe doanh nghiệp" từ 1Office</h5><p>Follow-up bằng các buổi tư vấn/demo về vận hành, nhân sự, hiệu suất, dữ liệu.</p><div class="tpa-result">→ Kết nối thông điệp sức khỏe con người với sức khỏe vận hành doanh nghiệp.</div></div></div>
-            </div>
+        <div class="tp-actions">
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Gây quỹ sân chơi thể thao cộng đồng</h5>
+            <p>Mỗi đội, partner hoặc sponsor đóng góp một phần vào quỹ xây dựng/cải tạo sân chơi.</p>
+            <div class="tpa-result">→ Lan tỏa tinh thần vận động lành mạnh, gắn kết và phát triển cân bằng.</div>
           </div>
-          <div class="tp-value-box"><h4>Giá trị tạo ra</h4><p>Người tham gia không chỉ đến để chơi, mà còn góp mặt trong một hoạt động có ý nghĩa xã hội. Đây là lớp giúp giải có chiều sâu, có câu chuyện để truyền thông và có lý do để partner đồng hành lâu dài.</p></div>
-        </div>
-      </div>
-      <!-- Tab 5 -->
-      <div class="tab-panel" id="t5">
-        <div class="tp-inner">
-          <div>
-            <div class="tp-actions">
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Alumni / Community sau giải</h5><p>Duy trì cộng đồng đội thi, partner, sponsor và khách mời sau mùa đầu.</p><div class="tpa-result">→ Giữ kết nối và tạo nền cho mùa tiếp theo.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Ranking / Award theo mùa</h5><p>Lưu lại thứ hạng, danh hiệu, đội nổi bật, đội được yêu thích.</p><div class="tpa-result">→ Tạo lý do để đội quay lại bảo vệ vị trí hoặc nâng hạng ở mùa sau.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Mini Clinic / Coaching giữa các mùa</h5><p>Buổi huấn luyện Pickleball với HLV, workshop kỹ thuật hoặc buổi giao lưu nhỏ.</p><div class="tpa-result">→ Giữ nhiệt cộng đồng và nuôi dưỡng tinh thần thi đấu.</div></div></div>
-              <div class="tpa"><div class="tpa-dot"></div><div><h5>Content Library</h5><p>Lưu trữ hình ảnh, video, câu chuyện đội, quote, recap, case truyền thông.</p><div class="tpa-result">→ Tạo tài sản nội dung dùng cho PR, sales kit, sponsor deck mùa sau.</div></div></div>
-            </div>
+
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Gói chăm sóc sức khỏe</h5>
+            <p>Kết hợp cơ sở y tế, bảo hiểm hoặc health/wellness partner để tặng gói khám/tư vấn.</p>
+            <div class="tpa-result">→ Gắn giải với tinh thần “con người khỏe, doanh nghiệp khỏe”.</div>
           </div>
-          <div class="tp-value-box"><h4>Giá trị tạo ra</h4><p>Mỗi mùa giải không bắt đầu lại từ con số 0, mà tích lũy thêm đội thi, câu chuyện, partner, sponsor, cộng đồng và tài sản truyền thông.</p></div>
+
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Workshop sức khỏe tại doanh nghiệp</h5>
+            <p>Sau giải, phối hợp chuyên gia sức khỏe tổ chức workshop/tham vấn cho doanh nghiệp tham gia.</p>
+            <div class="tpa-result">→ Kéo dài tác động của giải sau ngày thi đấu.</div>
+          </div>
+
+          <div class="tpa">
+            <div class="tpa-dot"></div>
+            <h5>Demo khám sức khỏe vận hành</h5>
+            <p>1Office follow-up bằng buổi tư vấn/demo về vận hành, nhân sự, hiệu suất và dữ liệu.</p>
+            <div class="tpa-result">→ Kết nối sức khỏe con người với sức khỏe vận hành doanh nghiệp.</div>
+          </div>
         </div>
       </div>
     </div>
