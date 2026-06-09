@@ -150,6 +150,16 @@ header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 1px 0 var
 .mech-tag{font-size:12px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
 .mech-card p{font-size:14px;color:var(--gray);line-height:1.6;margin-bottom:8px}
 .mech-result{font-size:13px;font-weight:600;color:var(--navy)}
+  .team-format-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.team-format-group{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.team-format-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand);margin-bottom:18px}
+.team-format-card{padding:18px 0;border-top:1px solid var(--border)}
+.team-format-card:first-of-type{border-top:0;padding-top:0}
+.team-format-card h3{font-size:18px;line-height:1.35;margin-bottom:8px;color:var(--navy)}
+.team-format-card p{font-size:15px;line-height:1.65;color:var(--gray);margin:0}
+.simple-format-box{margin-top:32px;background:var(--navy);color:#fff;border-radius:var(--r);padding:32px 40px;text-align:center}
+.simple-format-box span{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#FFB199;margin-bottom:12px}
+.simple-format-box p{max-width:900px;margin:0 auto;font-size:18px;line-height:1.7;color:rgba(255,255,255,.82)}
 
 /* ─── STRATEGY PILLARS ───────────────────────────────── */
 .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -337,7 +347,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--bg-alt
   .comm-2col,.boards-grid{grid-template-columns:1fr}
   .bi2{grid-template-columns:1fr}
 }
-@media(max-width:767px){.logo-grid{grid-template-columns:repeat(2,1fr)}.problem-head{text-align:left;margin-bottom:32px}.problem-head .sec-title{font-size:34px}.problem-grid{grid-template-columns:1fr}
+@media(max-width:767px){.logo-grid{grid-template-columns:repeat(2,1fr)}.problem-head{text-align:left;margin-bottom:32px}.problem-head .sec-title{font-size:34px}.problem-grid{grid-template-columns:1fr}.problem-head .sec-title{font-size:34px}.problem-grid{grid-template-columns:1fr}.team-format-grid{grid-template-columns:1fr}.simple-format-box{text-align:left;padding:28px}.simple-format-box p{font-size:16px}
   .hero{padding:72px 0 64px}.hero h1{font-size:36px}.hero-sub{font-size:17px}
   .hero-stats{flex-direction:column;gap:24px}
   .hdr,.wrap,.ftr{padding-left:20px;padding-right:20px}
