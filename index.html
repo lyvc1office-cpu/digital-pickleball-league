@@ -134,6 +134,55 @@ header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 1px 0 var
 .insight-box{background:rgba(240,80,10,.06);border:1px solid rgba(240,80,10,.2);border-radius:10px;padding:20px 24px;margin-top:20px}
 .insight-box p{font-size:14px;font-weight:600;color:var(--brand);line-height:1.5}
 .insight-box p::before{content:'Insight: ';font-weight:700}
+.learn-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin-top:36px;
+}
+
+.learn-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  padding:28px 24px;
+  box-shadow:var(--sh);
+  height:100%;
+}
+
+.learn-brand{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 14px;
+  border-radius:999px;
+  background:rgba(240,80,10,.08);
+  color:var(--brand);
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:18px;
+}
+
+.learn-card p{
+  font-size:15px;
+  line-height:1.65;
+  color:var(--gray);
+  margin-bottom:18px;
+}
+
+.learn-result{
+  font-size:14px;
+  line-height:1.55;
+  color:var(--brand);
+  font-weight:700;
+}
+
+@media(max-width:1200px){
+  .learn-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:767px){
+  .learn-grid{grid-template-columns:1fr}
+}  
 
 /* ─── FORMULA SECTION ────────────────────────────────── */
 .formula-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -655,61 +704,31 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--bg-alt
       <p class="sec-sub a" style="margin:0 auto">CMC TS, MB, D-Joy, Michelob Ultra và các giải quốc tế cho thấy: sức hút không đến từ số trận hay giải thưởng, mà từ cách giải được thiết kế như một nền tảng kết nối, truyền thông và cộng đồng.</p>
     </div>
 
-    <!-- Group I: 2 yếu tố sức hút -->
-    <div style="margin-bottom:40px">
-      <div class="bmk-group-title a">I — Hai yếu tố tạo sức hút thật sự</div>
-      <div class="bmk-grid">
-        <div class="bmk-card a">
-          <div class="bmk-card-num">Yếu tố 01</div>
-          <h3>Giải phải có lý do để người tham gia tự lan tỏa</h3>
-        
-          <div class="bmk-cases">
-            <div class="bmk-case"><span class="bmk-case-tag">CMC TS</span><span>Bình chọn "Cặp đôi phong cách nhất" tính điểm bằng like/comment/share — biến VĐV thành người lan tỏa cho giải.</span></div>
-            <div class="bmk-case"><span class="bmk-case-tag">D-Joy</span><span>Vận hành nhiều kênh truyền thông fanpage, TikTok, KOL, báo chí, livestream — giải trở thành content engine kéo dài trước–trong–sau sự kiện.</span></div>
-          </div>
-          <div class="insight-box"><p>Muốn giải lan tỏa, phải thiết kế để người tham gia muốn khoe mình là một phần của giải.</p></div>
-        </div>
-        <div class="bmk-card a">
-          <div class="bmk-card-num">Yếu tố 02</div>
-          <h3>Giải phải có một câu chuyện lớn hơn thi đấu</h3>
-      
-          <div class="bmk-cases">
-            <div class="bmk-case"><span class="bmk-case-tag">MB</span><span>Gắn giải với câu chuyện cộng đồng, thiện nguyện và giáo dục — người tham gia góp mặt vào hoạt động có ý nghĩa xã hội.</span></div>
-            <div class="bmk-case"><span class="bmk-case-tag">Michelob Ultra</span><span>Xây thông điệp "Step into the Flow" — gắn với trạng thái tập trung, linh hoạt, kết nối và năng lượng tích cực.</span></div>
-          </div>
-          <div class="insight-box"><p>Muốn giải có sức nhớ, người tham gia phải cảm thấy họ đang góp mặt trong một câu chuyện đáng để thuộc về.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Group II: 2 yếu tố bền vững -->
-    <div>
-      <div class="bmk-group-title a">II — Hai điều kiện để giải phát triển bền vững</div>
-      <div class="bmk-grid">
-        <div class="bmk-card a">
-          <div class="bmk-card-num">Điều kiện 03</div>
-          <h3>Giải cần một hệ sinh thái đồng hành</h3>
-          
-          <div class="bmk-cases">
-            <div class="bmk-case"><span class="bmk-case-tag">CMC TS</span><span>Nhiều khách mời, đối tác và nhà tài trợ — giải là ngày hội kết nối trong hệ sinh thái doanh nghiệp.</span></div>
-            <div class="bmk-case"><span class="bmk-case-tag">D-Joy</span><span>Phát triển theo hướng tour — sân, chuyên môn, tài trợ, KOL, cộng đồng — giúp giải mở rộng thay vì phụ thuộc vào một đơn vị.</span></div>
-          </div>
-          <div class="insight-box"><p>1Office nên thiết kế một sân chơi để nhiều bên cùng có vai trò, cùng có lợi ích và cùng lan tỏa.</p></div>
-        </div>
-        <div class="bmk-card a">
-          <div class="bmk-card-num">Điều kiện 04</div>
-          <h3>Giải cần được thiết kế như một IP nhiều mùa</h3>
-          
-          <div class="bmk-cases">
-            <div class="bmk-case"><span class="bmk-case-tag">D-Joy</span><span>Tour nhiều chặng — tạo cảm giác đây là hệ thống giải đấu có khả năng mở rộng, không phải sự kiện đơn lẻ.</span></div>
-            <div class="bmk-case"><span class="bmk-case-tag">CMC TS</span><span>Truyền thông bằng con số VĐV, trận đấu, nhà tài trợ, khu vực — tạo cảm giác giải có hành trình phát triển.</span></div>
-          </div>
-          <div class="insight-box"><p>Giá trị dài hạn không nằm ở một ngày tổ chức, mà ở cộng đồng, ranking và tài sản tích lũy qua từng mùa.</p></div>
-        </div>
-      </div>
-    </div>
+ <div class="learn-grid">
+  <div class="learn-card a">
+    <div class="learn-brand">MB</div>
+    <p>Gắn giải với câu chuyện cộng đồng, thiện nguyện và giáo dục. Người tham gia không chỉ đến để thi đấu, mà còn góp mặt trong một hoạt động có ý nghĩa xã hội.</p>
+    <div class="learn-result">→ Giúp giải có chiều sâu và lý do để được ghi nhớ lâu hơn.</div>
   </div>
-</section>
+
+  <div class="learn-card a">
+    <div class="learn-brand">CMC TS</div>
+    <p>Tạo cơ chế để người tham gia tự lan tỏa thông qua bình chọn, tương tác, đội thi và mạng lưới khách mời/partner.</p>
+    <div class="learn-result">→ Biến người tham gia thành một điểm phát sóng truyền thông cho giải.</div>
+  </div>
+
+  <div class="learn-card a">
+    <div class="learn-brand">D-Joy</div>
+    <p>Vận hành truyền thông đa kênh: fanpage, TikTok, KOL, báo chí, livestream; kéo dài nội dung trước – trong – sau sự kiện.</p>
+    <div class="learn-result">→ Biến giải thành một content engine, không chỉ là một ngày thi đấu.</div>
+  </div>
+
+  <div class="learn-card a">
+    <div class="learn-brand">Michelob Ultra</div>
+    <p>Xây thông điệp cảm xúc rõ ràng cho giải, gắn với tinh thần tập trung, linh hoạt, kết nối và năng lượng tích cực.</p>
+    <div class="learn-result">→ Giúp hoạt động thể thao có màu sắc thương hiệu riêng.</div>
+  </div>
+</div>
 
 <!-- ══ S4: KẾT LUẬN BENCHMARK — CÔNG THỨC ══════════════ -->
 <section class="sec" id="cong-thuc">
