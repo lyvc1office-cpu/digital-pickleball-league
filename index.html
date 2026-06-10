@@ -443,6 +443,137 @@ header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 1px 0 var
 .logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .logo-cell{background:#fff;border:1px solid var(--border);border-radius:10px;min-height:82px;display:flex;align-items:center;justify-content:center;padding:14px}
 .logo-cell img{max-width:100%;max-height:46px;object-fit:contain}
+  /* MEDIA PARTNER & KOL */
+.media-kol-wrap{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-top:44px;
+  padding-top:34px;
+  border-top:1px solid var(--border);
+}
+
+.media-kol-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  padding:24px;
+  box-shadow:var(--sh);
+}
+
+.media-kol-card h3{
+  font-size:18px;
+  font-weight:800;
+  color:var(--navy);
+  margin-bottom:8px;
+}
+
+.media-kol-note{
+  font-size:14px;
+  line-height:1.65;
+  color:var(--gray);
+  margin-bottom:18px;
+}
+
+.media-kol-list{
+  font-size:14px;
+  line-height:1.6;
+  color:var(--gray);
+  margin-bottom:18px;
+}
+
+.media-logo-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.media-logo-cell{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:10px;
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px;
+}
+
+.media-logo-cell img{
+  max-width:100%;
+  max-height:42px;
+  object-fit:contain;
+}
+
+.kol-group + .kol-group{
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid var(--border);
+}
+
+.kol-group-title{
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--gray);
+  margin-bottom:12px;
+}
+
+.kol-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.kol-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  background:var(--bg-alt);
+  border:1px solid var(--border);
+  border-radius:12px;
+}
+
+.kol-item img{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  object-fit:cover;
+  border:1px solid var(--border);
+  background:#fff;
+  flex-shrink:0;
+}
+
+.kol-item strong{
+  display:block;
+  font-size:14px;
+  font-weight:700;
+  color:var(--navy);
+  line-height:1.35;
+}
+
+.kol-item span{
+  display:block;
+  font-size:12px;
+  color:var(--gray);
+  line-height:1.45;
+  margin-top:4px;
+}
+
+@media(max-width:1100px){
+  .media-kol-wrap{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:640px){
+  .media-logo-grid,
+  .kol-grid{
+    grid-template-columns:1fr;
+  }
+}
   .logo-cell img.logo-large{max-height:62px;max-width:88%}
 .logo-cell img.logo-xl{max-height:70px;max-width:88%}
 
@@ -1016,6 +1147,116 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--bg-alt
 <p style="font-size:13px;color:var(--gray);font-style:italic;margin-top:16px">* Logo chỉ dùng để minh họa nhóm đối tác/tài trợ tiềm năng theo từng danh mục.</p>
       </div>
     </div>
+
+    <div class="media-kol-wrap">
+  <!-- MEDIA PARTNER -->
+  <div class="media-kol-card">
+    <h3>Đối tác Media / Báo chí truyền thông</h3>
+    <p class="media-kol-note">
+      Nhóm đối tác hỗ trợ tăng độ phủ, độ uy tín và sức lan tỏa cho giải đấu trên báo chí, truyền thông và cộng đồng doanh nghiệp.
+    </p>
+
+    <div class="media-kol-list">
+      <strong>Tên tiêu biểu:</strong> Báo Tuổi Trẻ, VnExpress, Báo Lao Động, CafeF, VietnamBiz, TheLEADER
+    </div>
+
+    <div class="media-logo-grid">
+      <div class="media-logo-cell">
+        <img src="tuoi-tre.png" alt="Báo Tuổi Trẻ">
+      </div>
+      <div class="media-logo-cell">
+        <img src="vnexpress.png" alt="VnExpress">
+      </div>
+      <div class="media-logo-cell">
+        <img src="lao-dong.png" alt="Báo Lao Động">
+      </div>
+      <div class="media-logo-cell">
+        <img src="cafef.png" alt="CafeF">
+      </div>
+      <div class="media-logo-cell">
+        <img src="vietnambiz.png" alt="VietnamBiz">
+      </div>
+      <div class="media-logo-cell">
+        <img src="theleader.png" alt="TheLEADER">
+      </div>
+    </div>
+  </div>
+
+  <!-- KOL -->
+  <div class="media-kol-card">
+    <h3>KOL đề xuất</h3>
+    <p class="media-kol-note">
+      Gồm nhóm KOL vận động viên thi đấu và nhóm KOL giải trí / diễn viên / BTV / TikToker để tăng sức hút, khả năng check-in và lan tỏa social.
+    </p>
+
+    <div class="kol-group">
+      <div class="kol-group-title">KOL vận động viên thi đấu</div>
+      <div class="kol-grid">
+        <div class="kol-item">
+          <img src="kol-1.png" alt="Linh Muối">
+          <div>
+            <strong>Linh Muối</strong>
+            <span>KOL vận động viên thi đấu</span>
+          </div>
+        </div>
+
+        <div class="kol-item">
+          <img src="kol-2.png" alt="Trí Chuột">
+          <div>
+            <strong>Trí Chuột</strong>
+            <span>KOL vận động viên thi đấu</span>
+          </div>
+        </div>
+
+        <div class="kol-item">
+          <img src="kol-3.png" alt="Lý Hoàng Nam">
+          <div>
+            <strong>Lý Hoàng Nam</strong>
+            <span>KOL vận động viên thi đấu</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kol-group">
+      <div class="kol-group-title">KOL giải trí / diễn viên / BTV / TikToker</div>
+      <div class="kol-grid">
+        <div class="kol-item">
+          <img src="kol-4.png" alt="Diễn viên Đỗ Duy Nam">
+          <div>
+            <strong>Diễn viên Đỗ Duy Nam</strong>
+            <span>KOL giải trí / diễn viên</span>
+          </div>
+        </div>
+
+        <div class="kol-item">
+          <img src="kol-5.png" alt="NSƯT Quang Thắng">
+          <div>
+            <strong>NSƯT Quang Thắng</strong>
+            <span>KOL giải trí / diễn viên</span>
+          </div>
+        </div>
+
+        <div class="kol-item">
+          <img src="kol-6.png" alt="BTV Bảo Châu">
+          <div>
+            <strong>BTV Bảo Châu</strong>
+            <span>KOL BTV / MC</span>
+          </div>
+        </div>
+
+                     <div class="kol-item">
+          <img src="kol-7.png" alt="Tiktoker Tuấn Tự Do">
+          <div>
+            <strong>Tiktoker Tuấn Tự Do</strong>
+            <span>KOL TikToker / giải trí</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   </div>
 </section>
 
